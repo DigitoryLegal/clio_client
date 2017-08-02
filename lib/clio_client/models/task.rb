@@ -17,6 +17,9 @@ module ClioClient
 
     has_association :user, ClioClient::User
     has_association :assigner, ClioClient::User
+    has_association :assignee, ClioClient::Contact,
+                    :polymorphic => true,
+                    :accepted_types => %w(Contact))
     has_association :matter, ClioClient::Matter
     has_many_association :reminders, ClioClient::Reminder
 
