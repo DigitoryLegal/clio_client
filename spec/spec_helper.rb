@@ -5,6 +5,7 @@ require 'support/test_resource'
 require 'support/inherited_resource'
 require 'support/dummy_endpoint'
 require 'support/resource_examples'
+require 'date'
 
 require 'rspec'
 require 'rspec/core/shared_context'

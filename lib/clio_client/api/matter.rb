@@ -14,8 +14,6 @@ module ClioClient
       end
 
       def end_point_url;     'matters';  end
-      def plural_resource;   'matters';  end
-      def singular_resource; 'matter';   end
 
     end
   end

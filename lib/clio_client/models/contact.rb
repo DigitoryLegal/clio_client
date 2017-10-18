@@ -8,7 +8,7 @@ module ClioClient
                    name:                 {type: :string                  },
                    prefix:               {type: :string                  },
                    first_name:           {type: :string                  },
-                   last_name:            {type: :string                  }, 
+                   last_name:            {type: :string                  },
                    title:                {type: :string                  },
                    clio_connect_email:   {type: :string,   readonly: true},
                    email:                {type: :string,   readonly: true}
@@ -19,22 +19,20 @@ module ClioClient
     has_many_association :addresses,           ClioClient::Address
     has_many_association :web_sites,           ClioClient::WebSite
     has_many_association :instant_messengers,  ClioClient::InstantMessenger
-    has_many_association(:custom_field_values, ClioClient::CustomFieldValue, 
-        :polymorphic => true, 
-        :accepted_types => %w(CustomFieldCheckboxValue CustomFieldContactValue 
-        CustomFieldCurrencyValue CustomFieldDateValue CustomFieldTimeValue 
-        CustomFieldEmailValue CustomFieldMatterValue CustomFieldNumericValue 
-        CustomFieldPicklistValue CustomFieldTextAreaValue 
+    has_many_association(:custom_field_values, ClioClient::CustomFieldValue,
+        :polymorphic => true,
+        :accepted_types => %w(CustomFieldCheckboxValue CustomFieldContactValue
+        CustomFieldCurrencyValue CustomFieldDateValue CustomFieldTimeValue
+        CustomFieldEmailValue CustomFieldMatterValue CustomFieldNumericValue
+        CustomFieldPicklistValue CustomFieldTextAreaValue
         CustomFieldTextLineValue CustomFieldUrlValue))
     has_many_association :activity_rates,      ClioClient::Rate
 
 
     private
+
     def api
       session.contacts
     end
-      
-
-
   end
 end

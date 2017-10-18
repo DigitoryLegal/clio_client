@@ -1,7 +1,7 @@
 module ClioClient
 
   class Matter < Resource
-    
+
     set_attributes(id:                    {type: :int, readonly: true},
                    created_at:            {type: :datetime, readonly: true},
                    updated_at:            {type: :datetime, readonly: true},
@@ -21,20 +21,20 @@ module ClioClient
     alias_method :name, :display_number
     alias_method :name=, :display_number=
 
-    has_association(:client,            ClioClient::Contact, 
+    has_association(:client,            ClioClient::Contact,
                     :polymorphic => true, :accepted_types => %w(Person Company))
     has_association :responsible_attorney, ClioClient::User
     has_association :practice_area,        ClioClient::PracticeArea
-    has_many_association(:custom_field_values, ClioClient::CustomFieldValue, 
-        :polymorphic => true, 
-        :accepted_types => %w(CustomFieldCheckboxValue CustomFieldContactValue 
-        CustomFieldCurrencyValue CustomFieldDateValue CustomFieldTimeValue 
-        CustomFieldEmailValue CustomFieldMatterValue CustomFieldNumericValue 
-        CustomFieldPicklistValue CustomFieldTextAreaValue 
+    has_many_association(:custom_field_values, ClioClient::CustomFieldValue,
+        :polymorphic => true,
+        :accepted_types => %w(CustomFieldCheckboxValue CustomFieldContactValue
+        CustomFieldCurrencyValue CustomFieldDateValue CustomFieldTimeValue
+        CustomFieldEmailValue CustomFieldMatterValue CustomFieldNumericValue
+        CustomFieldPicklistValue CustomFieldTextAreaValue
         CustomFieldTextLineValue CustomFieldUrlValue))
 
-    has_association(:permission, ClioClient::Resource, 
-                    :polymorphic => true, 
+    has_association(:permission, ClioClient::Resource,
+                    :polymorphic => true,
                     :accepted_types => %w(Group User))
 
     has_many_association :activity_rates,      ClioClient::Rate

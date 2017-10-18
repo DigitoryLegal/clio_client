@@ -21,8 +21,6 @@ module ClioClient
       end
 
       def end_point_url;     "documents/#{document_id}/document_versions";  end
-      def plural_resource;   'document_versions';  end
-      def singular_resource; 'document_version';   end
 
     end
   end

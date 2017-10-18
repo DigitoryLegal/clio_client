@@ -14,8 +14,6 @@ module ClioClient
       end
 
       def end_point_url;     'practice_areas';  end
-      def plural_resource;   'practice_areas';  end
-      def singular_resource; 'practice_area';   end
 
     end
   end

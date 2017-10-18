@@ -11,10 +11,10 @@ module ClioClient
 
       def who_am_i
         resp = session.get("#{end_point_url}/who_am_i")
-        [ClioClient::Account.new(resp["account"], session), 
+        [ClioClient::Account.new(resp["account"], session),
          ClioClient::User.new(resp["user"], session)]
       end
-      
+
 
       private
 
@@ -23,8 +23,6 @@ module ClioClient
       end
 
       def end_point_url;     'users';  end
-      def plural_resource;   'users';  end
-      def singular_resource; 'user';   end
 
     end
   end

@@ -18,8 +18,6 @@ module ClioClient
       end
 
       def end_point_url;     'contacts';  end
-      def plural_resource;   'contacts';   end
-      def singular_resource; 'contact';  end
 
     end
   end

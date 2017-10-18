@@ -17,7 +17,7 @@ module ClioClient
       def update(id, params = {})
         begin
           response = session.put("#{end_point_url}/#{id}", {singular_resource => params}.to_json)
-          data_item(response[singular_resource])        
+          data_item(response[singular_resource])
         rescue ClioClient::UnknownResponse
           false
         end
@@ -49,7 +49,6 @@ module ClioClient
           end
         end
       end
-
     end
   end
 end

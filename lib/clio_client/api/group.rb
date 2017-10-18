@@ -14,8 +14,6 @@ module ClioClient
       end
 
       def end_point_url;     'groups';  end
-      def plural_resource;   'groups';  end
-      def singular_resource; 'group';   end
 
     end
   end

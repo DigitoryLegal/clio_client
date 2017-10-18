@@ -9,7 +9,7 @@ module ClioClient
 
       def start(params = {})
         response = session.post(end_point_url, {singular_resource => params}.to_json)
-        data_item(response[singular_resource])        
+        data_item(response[singular_resource])
       end
 
       def stop
@@ -23,8 +23,6 @@ module ClioClient
       end
 
       def end_point_url;     'timer';  end
-      def plural_resource;   'timer';  end
-      def singular_resource; 'timer';   end
 
     end
   end

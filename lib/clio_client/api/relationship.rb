@@ -14,8 +14,6 @@ module ClioClient
       end
 
       def end_point_url;     'relationships';  end
-      def plural_resource;   'relationships';  end
-      def singular_resource; 'relationship';   end
 
     end
   end

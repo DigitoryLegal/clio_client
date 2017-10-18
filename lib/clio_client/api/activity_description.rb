@@ -10,7 +10,6 @@ module ClioClient
       end
 
       def end_point_url; 'activity_descriptions'; end
-      def plural_resource; 'activity_descriptions'; end
 
     end
   end
